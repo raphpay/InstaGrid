@@ -118,8 +118,6 @@ class ViewController : UIViewController {
         default: break
         }
     }
-    
-    
     private func moveLayout(gesture : UIPanGestureRecognizer) {
         let translation = gesture.translation(in: mainLayout)
         if deviceOrientation == .portrait {
