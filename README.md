@@ -5,6 +5,7 @@
 This project is part of the OpenClassrooms Learning Program and available on [GitHub](https://github.com/raphpay/Instagrid)
 
 The main purpose of this project is to create the first application of the learning program.
+A README.pdf is available in order to see the screenshots for more readability.
 
 ## Features
 
