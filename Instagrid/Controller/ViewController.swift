@@ -12,19 +12,16 @@ class ViewController : UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var mainLayout: UIView!
     
-    @IBOutlet weak var topStackView: UIStackView!
-    @IBOutlet weak var bottomStackView: UIStackView!
-    
     @IBOutlet weak var swipeLabel: UILabel!
     
-    @IBOutlet weak var photo1: PhotoButton!
-    @IBOutlet weak var photo2: PhotoButton!
-    @IBOutlet weak var photo3: PhotoButton!
-    @IBOutlet weak var photo4: PhotoButton!
+    @IBOutlet weak var photo1: UIButton!
+    @IBOutlet weak var photo2: UIButton!
+    @IBOutlet weak var photo3: UIButton!
+    @IBOutlet weak var photo4: UIButton!
     
-    @IBOutlet weak var layout1: LayoutView!
-    @IBOutlet weak var layout2: LayoutView!
-    @IBOutlet weak var layout3: LayoutView!
+    @IBOutlet weak var layout1: UIButton!
+    @IBOutlet weak var layout2: UIButton!
+    @IBOutlet weak var layout3: UIButton!
     
     //MARK: - Properties
     var photoIndex = 0
@@ -50,6 +47,8 @@ class ViewController : UIViewController {
         setupUI()
         configureDeviceOrientation()
         configureSwipe()
+        
+        
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -170,42 +169,42 @@ class ViewController : UIViewController {
     
     func setupUI() {
         //Called in viewDidLoad. Set the default parameters for the screen
-        photo4.isHidden = true
-        layout1.selectedImage.isHidden = true
-        layout2.selectedImage.isHidden = false
-        layout3.selectedImage.isHidden = true
+//        photo4.isHidden = true
+//        layout1.selectedImage.isHidden = true
+//        layout2.selectedImage.isHidden = false
+//        layout3.selectedImage.isHidden = true
     }
     
     //Called when a layout is changed, the following functions configure the main layout with the appropriate pictures.
     func configureFirstLayout() {
-        photo1.isHidden = false
-        photo2.isHidden = true
-        photo3.isHidden = false
-        photo4.isHidden = false
+//        photo1.isHidden = false
+//        photo2.isHidden = true
+//        photo3.isHidden = false
+//        photo4.isHidden = false
         
-        layout1.selectedImage.isHidden = false
-        layout2.selectedImage.isHidden = true
-        layout3.selectedImage.isHidden = true
+//        layout1.selectedImage.isHidden = false
+//        layout2.selectedImage.isHidden = true
+//        layout3.selectedImage.isHidden = true
     }
     func configureSecondLayout() {
-        photo1.isHidden = false
-        photo2.isHidden = false
-        photo3.isHidden = false
-        photo4.isHidden = true
+//        photo1.isHidden = false
+//        photo2.isHidden = false
+//        photo3.isHidden = false
+//        photo4.isHidden = true
         
-        layout1.selectedImage.isHidden = true
-        layout2.selectedImage.isHidden = false
-        layout3.selectedImage.isHidden = true
+//        layout1.selectedImage.isHidden = true
+//        layout2.selectedImage.isHidden = false
+//        layout3.selectedImage.isHidden = true
     }
     func configureThirdLayout() {
-        photo1.isHidden = false
-        photo2.isHidden = false
-        photo3.isHidden = false
-        photo4.isHidden = false
+//        photo1.isHidden = false
+//        photo2.isHidden = false
+//        photo3.isHidden = false
+//        photo4.isHidden = false
         
-        layout1.selectedImage.isHidden = true
-        layout2.selectedImage.isHidden = true
-        layout3.selectedImage.isHidden = false
+//        layout1.selectedImage.isHidden = true
+//        layout2.selectedImage.isHidden = true
+//        layout3.selectedImage.isHidden = false
     }
 }
 
@@ -219,10 +218,10 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
         
         guard let photo = info[.editedImage] as? UIImage else { return }
         switch photoIndex {
-        case 0 : photo1.configure(with: photo)
-        case 1 : photo2.configure(with: photo)
-        case 2 : photo3.configure(with: photo)
-        case 3 : photo4.configure(with: photo)
+//        case 0 : photo1.configure(with: photo)
+//        case 1 : photo2.configure(with: photo)
+//        case 2 : photo3.configure(with: photo)
+//        case 3 : photo4.configure(with: photo)
         default: break
         }
         
