@@ -181,8 +181,6 @@ class ViewController : UIViewController {
     }
     
     //Called when a layout is changed, the following functions configure the main layout with the appropriate pictures.
- 
-    
     private func showPictures(for layout : Int) {
         for photo in photos {
             photo.isHidden = false
@@ -212,13 +210,19 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
         
         guard let photo = info[.editedImage] as? UIImage else { return }
         switch photoIndex {
-        case 0 : photo1.setImage(photo, for: .normal)
-        case 1 : photo2.setImage(photo, for: .normal)
-        case 2 : photo3.setImage(photo, for: .normal)
-        case 3 : photo4.setImage(photo, for: .normal)
+        case 0 : configure(photo1, with: photo)
+        case 1 : configure(photo2, with: photo)
+        case 2 : configure(photo3, with: photo)
+        case 3 : configure(photo4, with: photo)
         default: break
         }
         
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    private func configure(_ photo : UIButton, with image: UIImage) {
+        photo.setImage(nil, for: .normal)
+        photo.imageView?.contentMode = .scaleAspectFill
+        photo.setImage(image, for: .normal)
     }
 }
