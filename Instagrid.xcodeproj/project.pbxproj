@@ -13,6 +13,8 @@
 		8627976F254D4F0000F1A4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8627976D254D4F0000F1A4EB /* Main.storyboard */; };
 		86279771254D4F0200F1A4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86279770254D4F0200F1A4EB /* Assets.xcassets */; };
 		86279774254D4F0200F1A4EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86279772254D4F0200F1A4EB /* LaunchScreen.storyboard */; };
+		8627977E254D4FCE00F1A4EB /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8627977C254D4FCD00F1A4EB /* Delm-Medium.otf */; };
+		8627977F254D4FCE00F1A4EB /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8627977D254D4FCD00F1A4EB /* ThirstySoftRegular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		86279770254D4F0200F1A4EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86279773254D4F0200F1A4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86279775254D4F0200F1A4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8627977C254D4FCD00F1A4EB /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		8627977D254D4FCD00F1A4EB /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		86279766254D4F0000F1A4EB /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				86279767254D4F0000F1A4EB /* AppDelegate.swift */,
-				86279769254D4F0000F1A4EB /* SceneDelegate.swift */,
-				8627976B254D4F0000F1A4EB /* ViewController.swift */,
-				8627976D254D4F0000F1A4EB /* Main.storyboard */,
-				86279770254D4F0200F1A4EB /* Assets.xcassets */,
-				86279772254D4F0200F1A4EB /* LaunchScreen.storyboard */,
+				86279781254D4FD900F1A4EB /* Support */,
+				86279783254D4FE900F1A4EB /* Views */,
+				86279782254D4FE300F1A4EB /* Controller */,
 				86279775254D4F0200F1A4EB /* Info.plist */,
 			);
 			path = Instagrid;
+			sourceTree = "<group>";
+		};
+		86279781254D4FD900F1A4EB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				86279767254D4F0000F1A4EB /* AppDelegate.swift */,
+				86279769254D4F0000F1A4EB /* SceneDelegate.swift */,
+				86279770254D4F0200F1A4EB /* Assets.xcassets */,
+				8627977C254D4FCD00F1A4EB /* Delm-Medium.otf */,
+				8627977D254D4FCD00F1A4EB /* ThirstySoftRegular.otf */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		86279782254D4FE300F1A4EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8627976B254D4F0000F1A4EB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		86279783254D4FE900F1A4EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8627976D254D4F0000F1A4EB /* Main.storyboard */,
+				86279772254D4F0200F1A4EB /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +156,8 @@
 			files = (
 				86279774254D4F0200F1A4EB /* LaunchScreen.storyboard in Resources */,
 				86279771254D4F0200F1A4EB /* Assets.xcassets in Resources */,
+				8627977F254D4FCE00F1A4EB /* ThirstySoftRegular.otf in Resources */,
+				8627977E254D4FCE00F1A4EB /* Delm-Medium.otf in Resources */,
 				8627976F254D4F0000F1A4EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
