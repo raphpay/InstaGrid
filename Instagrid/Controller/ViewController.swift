@@ -23,6 +23,9 @@ class ViewController : UIViewController {
     @IBOutlet weak var layout2: UIButton!
     @IBOutlet weak var layout3: UIButton!
     
+    lazy var photos : [UIButton] = [photo1, photo2, photo3, photo4]
+    lazy var layouts : [UIButton] = [layout1, layout2, layout3]
+    
     //MARK: - Properties
     var photoIndex = 0
     let screenHeight = UIScreen.main.bounds.height * 2
@@ -47,8 +50,6 @@ class ViewController : UIViewController {
         setupUI()
         configureDeviceOrientation()
         configureSwipe()
-        
-        
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -91,9 +92,15 @@ class ViewController : UIViewController {
     func handleLayoutTap(tag: Int) {
         //Change the main layout, and select or deselect the button
         switch tag {
-        case 0: configureFirstLayout()
-        case 1: configureSecondLayout()
-        case 2: configureThirdLayout()
+        case 0:
+            showPictures(for: tag)
+            showSelectedImage(onlyFor: layout1)
+        case 1:
+            showPictures(for: tag)
+            showSelectedImage(onlyFor: layout2)
+        case 2:
+            showPictures(for: tag)
+            showSelectedImage(onlyFor: layout3)
         default: break
         }
     }
@@ -169,42 +176,29 @@ class ViewController : UIViewController {
     
     func setupUI() {
         //Called in viewDidLoad. Set the default parameters for the screen
-//        photo4.isHidden = true
-//        layout1.selectedImage.isHidden = true
-//        layout2.selectedImage.isHidden = false
-//        layout3.selectedImage.isHidden = true
+        showPictures(for: 1)
+        showSelectedImage(onlyFor: layout2)
     }
     
     //Called when a layout is changed, the following functions configure the main layout with the appropriate pictures.
-    func configureFirstLayout() {
-//        photo1.isHidden = false
-//        photo2.isHidden = true
-//        photo3.isHidden = false
-//        photo4.isHidden = false
-        
-//        layout1.selectedImage.isHidden = false
-//        layout2.selectedImage.isHidden = true
-//        layout3.selectedImage.isHidden = true
+ 
+    
+    private func showPictures(for layout : Int) {
+        for photo in photos {
+            photo.isHidden = false
+        }
+        switch layout {
+        case 0: photo2.isHidden = true
+        case 1: photo4.isHidden = true
+        default: break
+        }
     }
-    func configureSecondLayout() {
-//        photo1.isHidden = false
-//        photo2.isHidden = false
-//        photo3.isHidden = false
-//        photo4.isHidden = true
-        
-//        layout1.selectedImage.isHidden = true
-//        layout2.selectedImage.isHidden = false
-//        layout3.selectedImage.isHidden = true
-    }
-    func configureThirdLayout() {
-//        photo1.isHidden = false
-//        photo2.isHidden = false
-//        photo3.isHidden = false
-//        photo4.isHidden = false
-        
-//        layout1.selectedImage.isHidden = true
-//        layout2.selectedImage.isHidden = true
-//        layout3.selectedImage.isHidden = false
+    
+    private func showSelectedImage(onlyFor layout : UIButton) {
+        for layout in layouts {
+            layout.setImage(nil, for: .normal)
+        }
+        layout.setImage(UIImage(named: "Selected"), for: .normal)
     }
 }
 
@@ -218,10 +212,10 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
         
         guard let photo = info[.editedImage] as? UIImage else { return }
         switch photoIndex {
-//        case 0 : photo1.configure(with: photo)
-//        case 1 : photo2.configure(with: photo)
-//        case 2 : photo3.configure(with: photo)
-//        case 3 : photo4.configure(with: photo)
+        case 0 : photo1.setImage(photo, for: .normal)
+        case 1 : photo2.setImage(photo, for: .normal)
+        case 2 : photo3.setImage(photo, for: .normal)
+        case 3 : photo4.setImage(photo, for: .normal)
         default: break
         }
         

@@ -60,30 +60,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izF-ca-bZH">
-                                <rect key="frame" x="120" y="468" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="Zn5-9w-Y43"/>
-                                    <constraint firstAttribute="height" constant="80" id="w4a-X4-3lR"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Layout 2"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QD-AC-Lgj">
-                                <rect key="frame" x="220" y="468" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="BfH-bc-w8T"/>
-                                    <constraint firstAttribute="height" constant="80" id="wWM-yw-MVX"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Layout 3"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-lM-hOb">
-                                <rect key="frame" x="20" y="468" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="WJD-Qi-0R1"/>
-                                    <constraint firstAttribute="height" constant="80" id="wCn-11-cMK"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Layout 1"/>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7t-tI-1dm">
                                 <rect key="frame" x="20" y="144" width="280" height="280"/>
                                 <subviews>
@@ -97,26 +73,38 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                         <state key="normal" image="Plus"/>
+                                                        <connections>
+                                                            <action selector="addPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qh6-jO-yKG"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2B-kV-gKc">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2B-kV-gKc">
                                                         <rect key="frame" x="135" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                         <state key="normal" image="Plus"/>
+                                                        <connections>
+                                                            <action selector="addPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jaF-vW-VZ5"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Svd-NY-wuh">
                                                 <rect key="frame" x="0.0" y="135" width="260" height="125"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-Xx-qQH">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-Xx-qQH">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                         <state key="normal" image="Plus"/>
+                                                        <connections>
+                                                            <action selector="addPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="03Z-Wx-oGY"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDX-JE-y3r">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDX-JE-y3r">
                                                         <rect key="frame" x="135" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                         <state key="normal" image="Plus"/>
+                                                        <connections>
+                                                            <action selector="addPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9TO-Gu-ImA"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -132,6 +120,40 @@
                                     <constraint firstItem="gLP-DC-J3O" firstAttribute="top" secondItem="D7t-tI-1dm" secondAttribute="top" constant="10" id="zJm-Z5-ad5"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-lM-hOb">
+                                <rect key="frame" x="20" y="468" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="WJD-Qi-0R1"/>
+                                    <constraint firstAttribute="height" constant="80" id="wCn-11-cMK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="" image="Selected" backgroundImage="Layout 1"/>
+                                <connections>
+                                    <action selector="layoutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdB-O7-sMY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izF-ca-bZH">
+                                <rect key="frame" x="120" y="468" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Zn5-9w-Y43"/>
+                                    <constraint firstAttribute="height" constant="80" id="w4a-X4-3lR"/>
+                                </constraints>
+                                <state key="normal" image="Selected" backgroundImage="Layout 2"/>
+                                <connections>
+                                    <action selector="layoutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d9N-dA-D12"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QD-AC-Lgj">
+                                <rect key="frame" x="220" y="468" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="BfH-bc-w8T"/>
+                                    <constraint firstAttribute="height" constant="80" id="wWM-yw-MVX"/>
+                                </constraints>
+                                <state key="normal" image="Selected" backgroundImage="Layout 3"/>
+                                <connections>
+                                    <action selector="layoutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLk-aF-iBZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71861797569999997" green="0.84247356650000005" blue="0.89804923530000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -190,15 +212,15 @@
                                 <exclude reference="hiW-HC-zku"/>
                                 <exclude reference="SvB-Ut-6NM"/>
                                 <exclude reference="W8G-JJ-XTS"/>
-                                <exclude reference="S6h-BZ-VyR"/>
-                                <exclude reference="mDw-LK-9tW"/>
                                 <exclude reference="40j-M6-7hW"/>
                                 <exclude reference="Blt-Tb-KPk"/>
                                 <exclude reference="ceL-XT-C67"/>
                                 <exclude reference="yV7-bL-Bed"/>
+                                <exclude reference="S6h-BZ-VyR"/>
+                                <exclude reference="mDw-LK-9tW"/>
+                                <exclude reference="KHP-aN-d8V"/>
                                 <exclude reference="e7b-nA-iVv"/>
                                 <exclude reference="wJi-jm-lJ6"/>
-                                <exclude reference="KHP-aN-d8V"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -225,20 +247,20 @@
                                 <include reference="W8G-JJ-XTS"/>
                                 <exclude reference="YsU-Tm-YL0"/>
                                 <exclude reference="xdz-K2-Efb"/>
-                                <exclude reference="8oK-Yg-yDy"/>
-                                <include reference="S6h-BZ-VyR"/>
-                                <exclude reference="fPD-WU-biA"/>
-                                <include reference="mDw-LK-9tW"/>
                                 <exclude reference="40j-M6-7hW"/>
                                 <exclude reference="Blt-Tb-KPk"/>
                                 <include reference="ceL-XT-C67"/>
                                 <exclude reference="nKG-IL-5Jg"/>
                                 <exclude reference="yV7-bL-Bed"/>
-                                <include reference="e7b-nA-iVv"/>
-                                <exclude reference="wJi-jm-lJ6"/>
+                                <exclude reference="8oK-Yg-yDy"/>
+                                <include reference="S6h-BZ-VyR"/>
+                                <exclude reference="fPD-WU-biA"/>
+                                <include reference="mDw-LK-9tW"/>
+                                <exclude reference="FwB-dC-CDx"/>
                                 <include reference="KHP-aN-d8V"/>
                                 <exclude reference="mCq-cn-Ocj"/>
-                                <exclude reference="FwB-dC-CDx"/>
+                                <include reference="e7b-nA-iVv"/>
+                                <exclude reference="wJi-jm-lJ6"/>
                             </mask>
                         </variation>
                     </view>
@@ -266,6 +288,7 @@
         <image name="Layout 2" width="27" height="27"/>
         <image name="Layout 3" width="27" height="27"/>
         <image name="Plus" width="13.5" height="13.5"/>
+        <image name="Selected" width="27" height="27"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
